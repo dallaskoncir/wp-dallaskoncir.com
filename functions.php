@@ -112,6 +112,8 @@ add_action( 'widgets_init', 'dallaskoncir_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dallaskoncir_scripts() {
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . "/bower_components/fontawesome/css/font-awesome.min.css" );
+
 	wp_enqueue_style( 'dallaskoncir-style', get_stylesheet_uri() );
 
 	wp_deregister_script('jquery');
