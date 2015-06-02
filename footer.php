@@ -78,5 +78,8 @@
 
 <?php wp_footer(); ?>
 
+<script src="//use.typekit.net/auv7raf.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
 </body>
 </html>

@@ -1,3 +1,29 @@
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+h1.logo {
+  transform: skewX(-20deg);
+  @media (min-width: 700px) {
+    float: left;
+  }
+  
+  a, a:visited {
+    color: $color__link;
+    text-decoration: none;
+    font-family: $font__logo;
+    @include font-size(2);
+    text-shadow: $shadow__big;
+    letter-spacing: 1.25px;
+    line-height: 1.5;
+    &:hover, &:focus {
+      color: rgb(244,67,54);
+    }
+    span {
+      font-family: $font__main;
+    }
+    @media (min-width: 900px) {
+      @include font-size(3);
+    }
+  }
 }

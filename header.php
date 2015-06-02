@@ -23,21 +23,16 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dallaskoncir' ); ?></a>
 
 	<!-- Header and navigation -->
-  <header>
-    <div class="wrapper cf">
-      <h1>
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="logo">
         <a href="#" class="to-top"><span>&lt; </span><?php bloginfo('name') ?><span> &gt;</span></a>
       </h1>
       <button class="navbar-toggle">
         <i class="fa fa-bars"></i>
       </button>
-      <nav>
-        <ul class="cf">
-          <li><a href="#bio">About Me</a></li>
-          <li><a href="#work">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://medium.com/@dallaskoncir" target="_blank">Blog</a></li>
-        </ul>
+      <nav class="mainNav">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
       </nav>
     </div>
   </header>
