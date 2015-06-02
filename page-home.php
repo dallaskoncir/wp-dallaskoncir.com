@@ -19,11 +19,17 @@ get_header(); ?>
     <!-- Bio section -->
     <section id="bio" class="bio">
       <div class="wrapper">
-        <h2>About Me</h2>
-        <img src="images/me.jpg" alt="Dallas Koncir">
-        <p>I am a Front End web developer currently based in Norwich, Ontario, Canada. Designing and developing websites has been my passion since 2003 when I helped with developing the original website for my parents car dealership. Since then I have learned many new design and development skills.</p>
-        <p>I have worked as a freelance developer for the past 2 years but am putting that on hold for a couple of months to improve my skills at hackerYou in Toronto. If you have an idea or project in mind, don't hesitate to get in touch and we can create something awesome!</p>
-        <p>When I’m not making websites you can usually find me at a motocross track, hockey arena or in the gym. If you would like to know more about me look me up on <a href="https://www.facebook.com/dallas.koncir" target="_blank">Facebook</a>, <a href="http://twitter.com/dallaskoncir" target="_blank">Twitter</a> or <a href="https://www.linkedin.com/in/dallaskoncir" target="_blank">LinkedIn</a>.</p>
+        <?php
+          $aboutArgs = array( 'category_name' => 'about-me' );
+          $aboutQuery = new WP_Query( $aboutArgs );
+          if ( $aboutQuery->have_posts() ) while ( $aboutQuery->have_posts() ) : $aboutQuery->the_post(); ?>
+
+          <h3><?php the_title(); ?></h3>
+          <?php the_post_thumbnail('full'); ?>
+          <?php the_content(); ?>
+
+        <?php endwhile; // end of the loop. ?>
+        <?php wp_reset_postdata(); ?>
       </div>
     </section>
 

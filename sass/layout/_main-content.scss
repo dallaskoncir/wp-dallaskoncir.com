@@ -1,0 +1,29 @@
+.bio, .contact {
+  background-color: $color__background-darkGrey;
+}
+
+.bio {
+  padding: 110px 0;
+  color: white;
+  text-align: center;
+  img {
+    display: block;
+    width: 180px;
+    border: 1px solid white;
+    margin: 0 auto;
+    @media (min-width: 700px) {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+  p {
+    text-align: left;
+  }
+  a {
+    color: white;
+    transition: all 0.2s;
+    &:hover {
+      color: $color__link-hover;
+    }
+  }
+}
