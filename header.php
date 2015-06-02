@@ -25,9 +25,9 @@
 	<!-- Header and navigation -->
   <header>
     <div class="wrapper cf">
-      <div class="logo">
-        <a href="#" class="to-top"><span>&lt; </span>dallas.koncir<span> &gt;</span></a>
-      </div>
+      <h1>
+        <a href="#" class="to-top"><span>&lt; </span><?php bloginfo('name') ?><span> &gt;</span></a>
+      </h1>
       <button class="navbar-toggle">
         <i class="fa fa-bars"></i>
       </button>
