@@ -114,7 +114,29 @@ add_action( 'widgets_init', 'dallaskoncir_widgets_init' );
 function dallaskoncir_scripts() {
 	wp_enqueue_style( 'dallaskoncir-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'dallaskoncir-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_deregister_script('jquery');
+
+	wp_enqueue_script(
+		'jquery',
+		"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+		false, //dependencies
+		null, //version number
+		true //load in footer
+	);
+
+	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', //source
+		array( 'jquery' ), //dependencies
+		null, //version number
+		true //load in footer
+	);
+
+	wp_enqueue_script(
+	  'scripts', //handle
+	  get_template_directory_uri() . '/js/main.js', //source
+	  array( 'jquery', 'plugins' ), //dependencies
+	  null, // version number
+	  true //load in footer
+	);
 
 	wp_enqueue_script( 'dallaskoncir-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
