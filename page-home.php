@@ -10,7 +10,7 @@ get_header(); ?>
     <section id="intro" class="intro">
       <div class="wrapper">
         <div class="intro-text">
-          <h1>Front End Web Developer.</h1>
+          <h2><?php bloginfo('description'); ?></h2>
         </div>
         <a href="#bio" class="btn">Learn More</a>
       </div>

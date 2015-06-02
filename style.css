@@ -262,6 +262,18 @@ h1.logo {
         font-size: 48px;
         font-size: 3rem; } }
 
+h2 {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  font-weight: 100; }
+  h2:after {
+    display: block;
+    content: " ";
+    width: 50px;
+    margin: 32px auto;
+    border: 2px solid #f44336; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -676,7 +688,7 @@ object {
   display: block; }
 
 /*--------------------------------------------------------------
-# Header
+# Layout
 --------------------------------------------------------------*/
 .header {
   width: 100%;
@@ -710,6 +722,50 @@ object {
   @media (min-width: 900px) {
     .navbar-toggle {
       top: 12px; } }
+
+.intro {
+  padding-top: 100px;
+  height: 100%;
+  background: url(images/header.jpg) center fixed;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media (min-width: 700px) {
+    .intro {
+      padding-top: 50px;
+      height: 100vh; } }
+
+.intro-text {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); }
+  .intro-text p {
+    font-size: 1.25rem; }
+
+.btn {
+  display: block;
+  background: #f44336;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 16px;
+  transition: all 0.2s;
+  margin: 32px 0;
+  font-weight: 700; }
+  .btn:hover {
+    background: rgba(244, 67, 54, 0.9);
+    color: white; }
+  @media (min-width: 700px) {
+    .btn {
+      width: 200px;
+      margin: 32px auto; } }
 
 /*--------------------------------------------------------------
 # Universal Styles

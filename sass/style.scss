@@ -107,9 +107,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "media/media";
 
 /*--------------------------------------------------------------
-# Header
+# Layout
 --------------------------------------------------------------*/
 @import "layout/header";
+@import "layout/intro";
+@import "layout/main-content";
+@import "layout/portfolio";
+@import "layout/footer";
 
 /*--------------------------------------------------------------
 # Universal Styles
