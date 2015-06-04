@@ -1,15 +1,18 @@
+.bio, .work, .contact {
+  text-align: center;
+  padding: 110px 0;
+}
+
 .bio, .contact {
   background-color: $color__background-darkGrey;
+  color: $color__background-body;
 }
 
 .bio {
-  padding: 110px 0;
-  color: white;
-  text-align: center;
   img {
     display: block;
     width: 180px;
-    border: 1px solid white;
+    border: 1px solid $color__background-body;
     margin: 0 auto;
     @media (min-width: 700px) {
       float: left;
@@ -20,10 +23,112 @@
     text-align: left;
   }
   a {
-    color: white;
+    color: $color__background-body;
     transition: all 0.2s;
     &:hover {
       color: $color__link-hover;
     }
+  }
+}
+
+.work {
+  
+}
+
+.contact {
+  
+}
+
+.form-container {
+  margin-top: 32px;
+}
+
+.field {
+  label {
+    display: none;
+  }
+  input, textarea {
+    width: 100%;
+    display: block;
+    font-size: 1.5rem;
+    padding: 20px 10px;
+    border-top: 2px solid white;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #4A423F;
+  }
+  textarea {
+    border-bottom: 2px solid white;
+  }
+}
+
+::-webkit-input-placeholder {
+    color: $color__input-placeholder;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $color__input-placeholder;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color: $color__input-placeholder;
+}
+:-ms-input-placeholder {  
+    color: $color__input-placeholder;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 32px;
+  button {
+    width: 100%;
+    background: $color__background-body;
+    border: none;
+    padding: 20px;
+    color: $color__button;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    @media (min-width: 900px) {
+      width: 50%;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  @media (min-width: 900px) {
+    text-align: left;
+  }
+}
+
+.success {
+  display: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 5px;
+  color: #18bc9c;
+  background: $color__success-bg;
+  width: 50%;
+  position: fixed;
+  z-index: 1010;
+  top: 8px;
+  right: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.9);
+  border-radius: 3px;
+  @media (min-width: 700px) {
+    width: 33%;
+  }
+}
+
+.parsley-errors-list {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    padding: 8px;
+    background: white;
+    color: $color__button;
   }
 }

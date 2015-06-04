@@ -12,11 +12,11 @@
 	</div><!-- #content -->
 
 	<!-- Footer -->
-  <footer>
+  <footer class="footer">
     <div class="wrapper">
-      <div class="footer-top cf">
+      <div class="footer-top clear">
         <div class="info addy">
-          <h3>Location</h3>
+          <h4>Location</h4>
           <p>
             37 Bushell Court
             <br />
@@ -26,8 +26,8 @@
           </p>
         </div>
         <div class="info social">
-          <h3>Around the web</h3>
-          <ul class="cf">
+          <h4>Around the web</h4>
+          <ul class="clear">
             <li>
               <a href="https://www.facebook.com/dallas.koncir" class="si" target="_blank">
                 <i class="fa fa-fw fa-facebook"></i>
@@ -61,7 +61,7 @@
           </ul>
         </div>
         <div class="info details">
-          <h3>Contact Info</h3>
+          <h4>Contact Info</h4>
           <p>
             Phone: (519) 718-9115
             <br />

@@ -35,68 +35,36 @@ get_header(); ?>
 
     <!-- Portfolio section -->
     <section id="work" class="work">
-      <h2>Portfolio</h2>
-      <p>Check out some of my latest projects!</p>
-      <div class="portfolio-items cf">
-        <div class="portfolio-item">
-            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-              <div class="caption">
-                  <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                  </div>
-              </div>
-              <img src="images/portfolio/snaptrade.jpg" alt="Snaptrade Pro" />
-            </a>
+      <h3>Check out my latest work!</h3>
+      <p>Here is a look at some of my latest projects.</p>
+      <div class="portfolio-items">
+        <div class="featured">
+          <?php 
+            $portfolioArgs = array( 'post_type' => 'portfolio', 'category_name' => 'featured' ); 
+            $portfolioQuery = new WP_Query( $portfolioArgs );
+          if ( $portfolioQuery->have_posts() ) while ( $portfolioQuery->have_posts() ) : $portfolioQuery->the_post(); ?>
+          
+            <article class="item">
+              <figure class="image">
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail('full'); ?>
+                </a>
+              </figure>
+              <footer>
+                <h5>
+                  <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                  </a>
+                </h5>
+                <h6><?php the_field('client'); ?></h6>
+              </footer>
+            </article>
+
+        <?php endwhile; //end of loop ?>
+        <?php wp_reset_postdata(); ?>
         </div>
-        <div class="portfolio-item">
-            <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-              <div class="caption">
-                  <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                  </div>
-              </div>
-              <img src="images/portfolio/prh.jpg" alt="Prince Resorts Hawaii" />
-            </a>
-        </div>
-        <div class="portfolio-item">
-            <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-              <div class="caption">
-                  <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                  </div>
-              </div>
-              <img src="images/portfolio/datavisualytics.jpg" alt="Data Visualytics" />
-            </a>
-        </div>
-        <div class="portfolio-item">
-            <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-              <div class="caption">
-                  <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                  </div>
-              </div>
-              <img src="images/portfolio/vanhee.jpg" alt="Van Hee Drafting &amp; Design" />
-            </a>
-        </div>
-        <div class="portfolio-item">
-            <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-              <div class="caption">
-                  <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                  </div>
-              </div>
-              <img src="images/portfolio/evangel.jpg" alt="Evangel Pentecostal Church" />
-            </a>
-        </div>
-        <div class="portfolio-item">
-            <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-              <div class="caption">
-                  <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                  </div>
-              </div>
-              <img src="images/portfolio/prh25.jpg" alt="Portfolio Item" />
-            </a>
+        <div class="gallery">
+          
         </div>
       </div>
     </section>
@@ -106,7 +74,7 @@ get_header(); ?>
         <h2>Get in Touch</h2>
         <p>Fill out the form and I will get back to you ASAP.</p>
         <div class="form-container">
-          <form id="contactForm" method="post" action="contact.php" data-parsley-validate>
+          <form id="contactForm" method="post" action="" data-parsley-validate>
               <div class="field">
                 <label for="name">Name</label>
                   <input type="text" placeholder="Name" id="name" name="name" required>
@@ -133,183 +101,5 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="wrapper">
-            <div class="modal-body">
-              <h3>snaptradepro.com</h3>
-              <a href="http://www.snaptradepro.com" target="_blank">
-                  <img src="images/portfolio/snaptrade.jpg" alt="Snap Trade Pro">
-              </a>
-              <p>This is a Wordpress site that I am still working on with a client from Alberta, Canada. It uses the Bootstrap framework and runs on a customized version of the Shoestrap 2 Wordpress theme. One feature that I have loved is the git integration through WP Engine, being able to commit and upload files in one step is very productive.</p>
-              <ul class="cf">
-                <li>
-                  Client: <a href="http://www.snaptradepro.com" target="_blank">Snap Trade Pro</a>
-                </li>
-                <li>
-                  Date: <span>October 2014</span>
-                </li>
-                <li>Services:
-                  <span>Web Development, Wordpress, Bootstrap, Responsive</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="wrapper">
-            <div class="modal-body">
-              <h3>Prince Resorts Hawaii<br />Seasonal Landing Pages</h3>
-              <a href="http://www.princeresortshawaii.com/en/winter-escape/" target="_blank">
-                  <img src="images/portfolio/prh.jpg" alt="Prince Resorts Hawaii">
-              </a>
-              <p>This is a responsive landing page that I was tasked to build for Sabre Hospitality Solutions. There are 3 different versions for Prince Resorts' seasonal offers. I built it using the Foundation front end framework along with a lot of custom php and javascript to make it work with the website.</p>
-              <ul class="cf">
-                <li>
-                  Client: <span><a href="http://www.sabrehospitality.com" target="_blank">Sabre Hospitality Solutions</a></span>
-                </li>
-                <li>
-                  Date: <span>December 2013</span>
-                </li>
-                <li>
-                  Services: <span>Front End Development, Responsive, Foundation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="wrapper">
-            <div class="modal-body">
-              <h3>Data Visualytics</h3>
-              <img src="images/portfolio/datavisualytics.jpg" alt="Data Visualytics">
-              <p>This is a responsive one page website that I built for a company called Data Visualytics. I built this using the Foundation framework. It is a pretty simple site but it was a great starting point for working with Foundation.</p>
-              <ul class="cf">
-                <li>
-                  Client: <a href="http://datavisualytics.com" target="_blank">Data Visualytics</a>
-                </li>
-                <li>
-                  Date: <span>October 2013</span>
-                </li>
-                <li>
-                  Services: <span>Front End Development, Responsive, Foundation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </div>
-  
-
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="modal-body">
-            <h3>Van Hee Drafting &amp; Design</h3>
-            <a href="http://vanhee.ca" target="_blank">
-              <img src="images/portfolio/vanhee.jpg" alt="Van Hee Drafting &amp; Design" />
-            </a>
-            <p>This was the first website that I actually got paid to build. It is definitely a simple design but it is cool to look back and see how far I have come along as a developer.</p>
-            <ul class="cf">
-              <li>
-                Client: <a href="http://vanhee.ca" target="_blank">Van Hee Drafting &amp; Design</a>
-              </li>
-              <li>
-                Date: <span>February 2011</span>
-              </li>
-              <li>
-                Services: <span>Front End Development, HTML5, Web Design</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="modal-body">
-            <h3>Evangel Pentecostal Church<br />Responsive Email Template</h3>
-            <a href="http://dallaskoncir.com/email_templates/evangel_email.html" target="_blank">
-              <img src="images/portfolio/evangel.jpg" alt="Evangel Pentecostal Church">
-            </a>
-            <p>This is a custom email template that I built for my church in Brantford, Ontario. It is responsive and looks great on desktop and mobile devices. More emails are being opened on mobile devices these days (53% of email opens are from mobile devices - an email that I received from Litmus today).</p>
-            <ul class="cf">
-              <li>
-                Client: <a href="http://yourevangel.ca">Evangel Pentecostal Church</a>
-              </li>
-              <li>
-                Date: <span>January 2015</span>
-              </li>
-              <li>
-                Services: <span>Responsive Email Development, HTML Email</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="modal-body">
-            <h3>Prince Resorts Hawaii 25th Anniversary Page</h3>
-            <img src="images/portfolio/prh25.jpg" alt="Prince Resorts Hawaii">
-            <p>This a responsive landing page that I built through Sabre Hospitality Solutions. I used some awesome new tools for this build. Susy and Breakpoint are Sass tools that allow me to setup my own grid system as well as simplify media queries.</p>
-            <ul class="cf">
-              <li>
-                Client: <a href="http://www.sabrehospitality.com">Sabre Hospitality Solutions</a>
-              </li>
-              <li>
-                Date: <span>March 2015</span>
-              </li>
-              <li>
-                Services: <span>Front End Development, HTML, Sass, Javascript</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
 
 <?php get_footer(); ?>
