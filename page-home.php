@@ -6,16 +6,17 @@
 
 get_header(); ?>
 
-    <!-- Intro section -->
-    <section id="intro" class="intro">
-      <div class="wrapper">
-        <div class="intro-text">
-          <h2><?php bloginfo('description'); ?></h2>
-        </div>
-        <a href="#bio" class="btn">Learn More</a>
+  <!-- Intro section -->
+  <section id="intro" class="intro">
+    <div class="wrapper">
+      <div class="intro-text">
+        <h2><?php bloginfo('description'); ?></h2>
       </div>
-    </section>
-
+      <a href="#bio" class="btn">Learn More</a>
+    </div>
+  </section>
+  
+  <main id="content">
     <!-- Bio section -->
     <section id="bio" class="bio">
       <div class="wrapper">
@@ -37,8 +38,8 @@ get_header(); ?>
     <section id="work" class="work">
       <h3>Check out my latest work!</h3>
       <p>Here is a look at some of my latest projects.</p>
-      <div class="portfolio-items">
-        <div class="featured">
+      <div class="wrapper">
+        <div class="featured clear">
           <?php 
             $portfolioArgs = array( 'post_type' => 'portfolio', 'category_name' => 'featured' ); 
             $portfolioQuery = new WP_Query( $portfolioArgs );
@@ -47,17 +48,20 @@ get_header(); ?>
             <article class="item">
               <figure class="image">
                 <a href="<?php the_permalink(); ?>">
+                  <div class="overlay">
+                    <i class="fa fa-plus"></i>
+                  </div>
                   <?php the_post_thumbnail('full'); ?>
                 </a>
               </figure>
-              <footer>
+              <figcaption>
                 <h5>
                   <a href="<?php the_permalink(); ?>">
                     <?php the_title(); ?>
                   </a>
                 </h5>
                 <h6><?php the_field('client'); ?></h6>
-              </footer>
+              </figcaption>
             </article>
 
         <?php endwhile; //end of loop ?>
@@ -101,5 +105,6 @@ get_header(); ?>
         </div>
       </div>
     </section>
+  </main>
 
 <?php get_footer(); ?>

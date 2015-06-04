@@ -283,6 +283,12 @@ h4 {
   font-size: 1.5rem;
   text-transform: uppercase; }
 
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1rem; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -346,7 +352,7 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: #ccc;
+  background-color: #E6E9ED;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -887,6 +893,59 @@ object {
     padding: 8px;
     background: white;
     color: #f44336; }
+
+.work {
+  background: #F2F5F7; }
+  .work .wrapper {
+    padding: 0; }
+
+.featured .item {
+  float: left;
+  width: 100%;
+  padding: 40px 16px 0 16px; }
+  @media (min-width: 700px) {
+    .featured .item {
+      width: 50%; } }
+  .featured .item figure {
+    position: relative;
+    margin: 0; }
+    .featured .item figure a {
+      display: block;
+      line-height: 0; }
+      .featured .item figure a .overlay {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(244, 67, 54, 0.8);
+        transition: opacity 0.2s;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        .featured .item figure a .overlay:hover {
+          opacity: 1; }
+        .featured .item figure a .overlay i {
+          margin: auto;
+          font-size: 36px;
+          font-size: 2.25rem; }
+      .featured .item figure a:hover {
+        color: #fff; }
+  .featured .item figcaption {
+    background: #fff;
+    padding: 8px;
+    border-top: 0;
+    border: 1px solid #E6E9ED;
+    border-bottom-width: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
+    .featured .item figcaption a {
+      color: #404040; }
+      .featured .item figcaption a:hover {
+        color: #f44336; }
 
 .footer {
   width: 100%;
