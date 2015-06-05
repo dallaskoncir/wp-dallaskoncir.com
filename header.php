@@ -26,7 +26,7 @@
   <header class="header">
     <div class="wrapper">
       <h1 class="logo">
-        <a href="#" class="to-top"><span>&lt; </span><?php bloginfo('name') ?><span> &gt;</span></a>
+        <a href="<?php bloginfo('url'); ?>"><span>&lt; </span><?php bloginfo('name'); ?><span> &gt;</span></a>
       </h1>
       <button class="navbar-toggle">
         <i class="fa fa-bars"></i>

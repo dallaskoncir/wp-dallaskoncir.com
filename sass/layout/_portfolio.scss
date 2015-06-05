@@ -105,3 +105,59 @@
     }
   }
 }
+
+.single-portfolio { 
+  main {
+    padding: 150px 0 110px;
+    background: $color__background-darkGrey;
+    color: $color__background-body;
+  }
+  .hentry {
+    margin: 0;
+  }
+  .flickity-prev-next-button.previous {
+    left: 20px;
+    @media (min-width: 900px) {
+      left: -40px;
+    }
+  }
+  .flickity-prev-next-button.next { 
+    right: 20px; 
+    @media (min-width: 900px) {
+      right: -40px;
+    }
+  }
+  .entry-header {
+    text-align: center;
+  }
+  .description {
+    padding: 16px 0 0 16px;
+    width: 100%;
+    float: left;
+    @media (min-width: 700px) {
+      width: 70%;
+    }
+  }
+  .portfolio-sidebar {
+    padding-top: 16px;
+    width: 100%;
+    float: left;
+    @media (min-width: 700px) {
+      width: 25%;
+      float: right;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      padding-left: 16px;
+    }
+    li {
+      list-style-type: none;
+      i {
+        display: inline-block;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
