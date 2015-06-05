@@ -41,7 +41,14 @@ get_header(); ?>
                   </li>
                   <li>
                     <i class="fa fa-tags"></i>
-                    <?php the_tags(''); ?>
+                    <?php
+                    $posttags = get_the_tags();
+                    if ($posttags) {
+                      foreach($posttags as $tag) {
+                        echo $tag->name . ', '; 
+                      }
+                    }
+                    ?>
                   </li>
                   <li>
                     <i class="fa fa-user"></i>

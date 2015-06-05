@@ -230,7 +230,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -256,18 +256,22 @@ h1.logo {
     h1.logo a:hover, h1.logo a:focus, h1.logo a:visited:hover, h1.logo a:visited:focus {
       color: #f44336; }
     h1.logo a span, h1.logo a:visited span {
-      font-family: "proxima-nova", sans-serif; }
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
     @media (min-width: 900px) {
       h1.logo a, h1.logo a:visited {
         font-size: 48px;
         font-size: 3rem; } }
 
-h2:after, h3:after {
-  display: block;
-  content: " ";
-  width: 50px;
-  margin: 32px auto;
-  border: 2px solid #f44336; }
+h2, h3 {
+  font-family: "museo-slab";
+  letter-spacing: -1px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); }
+  h2:after, h3:after {
+    display: block;
+    content: " ";
+    width: 50px;
+    margin: 32px auto;
+    border: 2px solid #f44336; }
 
 h2 {
   font-size: 3rem;
@@ -278,6 +282,9 @@ h2 {
 h3 {
   font-size: 2rem;
   letter-spacing: 1.5px; }
+
+.work h3 {
+  text-shadow: none; }
 
 h4 {
   font-size: 1.5rem;
@@ -907,7 +914,7 @@ http://flickity.metafizzy.co
   padding: 16px;
   transition: all 0.2s;
   margin: 32px 0;
-  font-weight: 700; }
+  letter-spacing: 2px; }
   .btn:hover {
     background: rgba(244, 67, 54, 0.9);
     color: white; }
