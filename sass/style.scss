@@ -107,6 +107,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "media/media";
 
 /*--------------------------------------------------------------
+# Plugin CSS
+--------------------------------------------------------------*/
+@import "modules/flickity";
+
+/*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
 @import "layout/header";

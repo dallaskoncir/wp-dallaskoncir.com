@@ -60,3 +60,48 @@
     }
   }
 }
+
+.gallery {
+  padding: 0 16px;
+  margin-top: 32px;
+  .gallery-item {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    @media (min-width: 700px) {
+      float: left;
+      width: 25%;
+    }
+    a {
+      display: block;
+      line-height: 0;
+      &:hover {
+        color: $color__background-body;
+      }
+    }
+    .overlay {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $color__overlay;
+      transition: opacity 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      &:hover {
+        opacity: 1;
+      }
+      .title {
+        margin: auto;
+      }
+      h5,h6 {
+        line-height: 1.25;
+      }
+    }
+  }
+}

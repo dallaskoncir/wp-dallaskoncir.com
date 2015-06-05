@@ -39,9 +39,10 @@ get_header(); ?>
       <h3>Check out my latest work!</h3>
       <p>Here is a look at some of my latest projects.</p>
       <div class="wrapper">
+        <!-- Featured portfolio items loop -->
         <div class="featured clear">
           <?php 
-            $portfolioArgs = array( 'post_type' => 'portfolio', 'category_name' => 'featured' ); 
+            $portfolioArgs = array( 'post_type' => 'portfolio', 'category_name' => 'featured', 'orderby' => 'date', 'order' => 'ASC' ); 
             $portfolioQuery = new WP_Query( $portfolioArgs );
           if ( $portfolioQuery->have_posts() ) while ( $portfolioQuery->have_posts() ) : $portfolioQuery->the_post(); ?>
           
@@ -67,8 +68,31 @@ get_header(); ?>
         <?php endwhile; //end of loop ?>
         <?php wp_reset_postdata(); ?>
         </div>
-        <div class="gallery">
-          
+        <!-- Portfolio gallery loop -->
+        <div class="gallery js-flickity clear" 
+          data-flickity-options='{
+            "imagesLoaded": true,
+            "contain": true
+          }'>
+          <?php  
+            $galleryArgs = array( 'post_type' => 'portfolio', 'category_name' => 'gallery', 'orderby' => 'date', 'order' => 'ASC' );
+            $galleryQuery = new WP_Query( $galleryArgs );
+            if ( $galleryQuery->have_posts() ) while ( $galleryQuery->have_posts() ) : $galleryQuery->the_post(); ?>
+
+            <figure class="gallery-item">
+              <a href="<?php the_permalink(); ?>">
+                <div class="overlay">
+                  <div class="title">
+                    <h5><?php the_title(); ?></h5>
+                    <h6><?php the_field('client'); ?></h6>
+                  </div>
+                </div>
+                <?php the_post_thumbnail('medium'); ?>
+              </a>
+            </figure>
+
+          <?php endwhile; //end of loop ?>
+          <?php wp_reset_postdata(); ?>
         </div>
       </div>
     </section>
@@ -81,22 +105,22 @@ get_header(); ?>
           <form id="contactForm" method="post" action="" data-parsley-validate>
               <div class="field">
                 <label for="name">Name</label>
-                  <input type="text" placeholder="Name" id="name" name="name" required>
+                <input type="text" placeholder="Name" id="name" name="name" required>
               </div>
               <div class="field">
-                  <label for="email">Email Address</label>
-                  <input type="email" placeholder="Email Address" id="email" name="email" required>
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Email Address" id="email" name="email" required>
               </div>
               <div class="field">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" placeholder="Phone Number" id="phone" name="phone" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" placeholder="Phone Number" id="phone" name="phone" required>
               </div>
               <div class="field">
-                  <label for="message">Message</label>
-                  <textarea rows="5" placeholder="Message" id="message" name="message" required></textarea>
+                <label for="message">Message</label>
+                <textarea rows="5" placeholder="Message" id="message" name="message" required></textarea>
               </div>
               <div class="submit">
-                  <button type="submit">Send</button>
+                <button type="submit">Send</button>
               </div>
             </form>
             <div class="success">

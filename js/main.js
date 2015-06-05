@@ -58,5 +58,49 @@ $(function() {
 
   // Placeholder fix
   $('input, textarea').placeholder();
+
+  // When form is submitted, get info.
+  $('form#contactForm').on('submit', function(e) {
+    e.preventDefault();
+    // Store info in variables.
+    // Get name
+    var fullname = $('#name').val();
+
+    // Get email address
+    var email = $('#email').val();
+
+    // Get phone number
+    var phone = $('#phone').val();
+
+    // Get content
+    var content = $('#message').val();
+
+    // Send message to Mandrill.
+    $.post('wp-content/themes/dallaskoncir/email.php', {
+      data: {
+        message: {
+          subject: 'Someone wants you to build an Internet',
+          text: content,
+          from_email: email,
+          from_name: fullname,
+          to: [{
+            email: 'me@dallaskoncir.com',
+            name: 'Dallas Koncir',
+            type: 'to'
+          }]
+        }
+      }
+    })
+    .then(function(res) {
+      var response = JSON.parse(res)[0];
+      if (response.status === 'sent') {
+        $('.success').fadeIn("fast").delay(5000).fadeOut("fast");
+        $('form#contactForm').resetForm();
+      } else {
+        // $('.modal').addClass('show error');
+      }
+    });
+    // When we get the message back, tell the user if it was good or bad
+  });
   
 });
