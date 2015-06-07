@@ -40,14 +40,12 @@
 	a {
 		color: $color__link;
 		text-decoration: none;
-		@include font-size(1);
+		@include font-size(1.125);
+		text-transform: uppercase;
 		text-shadow: $shadow__small;
 		transition: all 0.2s;
 		&:hover, &.current {
 			color: $color__link-hover;
-		}
-		@media (min-width: 900px) {
-			@include font-size(1.25);
 		}
 	}
 }

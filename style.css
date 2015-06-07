@@ -488,16 +488,13 @@ a {
   .mainNav a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 18px;
+    font-size: 1.125rem;
+    text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     transition: all 0.2s; }
     .mainNav a:hover, .mainNav a.current {
       color: #f44336; }
-    @media (min-width: 900px) {
-      .mainNav a {
-        font-size: 20px;
-        font-size: 1.25rem; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -885,7 +882,7 @@ http://flickity.metafizzy.co
   padding-top: 100px;
   height: 100%;
   background-color: #212121;
-  background-image: url(http://www.transparenttextures.com/patterns/shley-tree-2.png);
+  background-image: url(images/header.png);
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   text-align: center;
   color: white;
