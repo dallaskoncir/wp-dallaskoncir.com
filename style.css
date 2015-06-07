@@ -274,7 +274,7 @@ h2, h3 {
     border: 2px solid #f44336; }
 
 h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   letter-spacing: 1.5px;
   line-height: 1;
   font-weight: 100; }
@@ -1241,8 +1241,7 @@ http://flickity.metafizzy.co
 # Universal Styles
 --------------------------------------------------------------*/
 .wrapper {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
-  position: relative;
-  clear: both; }
+  padding: 0 16px;
+  position: relative; }
