@@ -24,7 +24,7 @@
 
 	<!-- Header and navigation -->
   <header class="header">
-    <div class="wrapper">
+    <div class="wrapper clear">
       <h1 class="logo">
         <a href="<?php bloginfo('url'); ?>"><span>&lt; </span><?php bloginfo('name'); ?><span> &gt;</span></a>
       </h1>

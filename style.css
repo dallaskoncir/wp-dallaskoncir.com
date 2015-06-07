@@ -456,14 +456,13 @@ a {
   padding: 16px 0; }
   @media (min-width: 700px) {
     .mainNav {
+      display: block;
       float: right;
-      padding: 12px 0 0;
-      margin: 0;
-      margin-right: 64px; } }
+      padding: 16px 0 0;
+      margin: 0; } }
   @media (min-width: 900px) {
     .mainNav {
-      margin-right: 80px;
-      padding: 20px 0 0; } }
+      padding: 28px 0 0; } }
   .mainNav ul {
     list-style: none;
     margin: 0;
@@ -875,6 +874,9 @@ http://flickity.metafizzy.co
   .navbar-toggle i {
     font-size: 3rem;
     color: #ffffff; }
+  @media (min-width: 700px) {
+    .navbar-toggle {
+      display: none; } }
   @media (min-width: 900px) {
     .navbar-toggle {
       top: 12px; } }
