@@ -1,8 +1,8 @@
 .footer {
   width: 100%;
-  background-color: $color__header-bg;
-  padding: 110px 0 0;
-  color: white;
+  background-color: $color__background-body;
+  padding: 50px 0 0;
+  color: $color__header-bg;
   text-align: center;
 }
 
@@ -14,7 +14,7 @@
     margin-left: 0;
     margin-right: 0;
     @media (min-width: 900px) {
-      width: 33%;
+      width: 50%;
     }
   }
   .social ul {
@@ -34,11 +34,10 @@
       display: block;
       width: 50px;
       height: 50px;
-      border: 1px solid white;
-      border-radius: 50%;
-      line-height: 1.9;
+      border: 1px solid $color__header-bg;
+      line-height: 1.8;
       &:hover {
-        background: $color__background-body;
+        border-color: $color__link-hover;
       }
     }
   }
@@ -48,7 +47,7 @@
     }
   }
   a {
-    color: $color__background-body;
+    color: $color__header-bg;
     text-decoration: none;
     &:hover {
       color: $color__link-hover;
@@ -58,5 +57,5 @@
 
 .footer-bottom {
   padding: 16px 0;
-  border-top: 1px solid rgba(255,255,255,0.3); 
+  border-top: 1px solid $color__header-bg; 
 }

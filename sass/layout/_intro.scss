@@ -1,8 +1,9 @@
 .intro {
   padding-top: 100px;
   height: 100%;
-  background: url(images/header.jpg) center fixed;
-  background-size: cover;
+  background-color: #212121;
+  background-image: url(http://www.transparenttextures.com/patterns/shley-tree-2.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   text-align: center;
   color: white;
   display: flex;

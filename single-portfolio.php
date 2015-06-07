@@ -32,6 +32,7 @@ get_header(); ?>
               <div class="description">
                 <h5><?php the_title(); ?></h5>
                 <?php the_content(); ?>
+                <a href="<?php the_field('url'); ?>" target="_blank" class="btn">View Live Site</a>
               </div>
               <aside class="portfolio-sidebar">
                 <ul>
@@ -53,10 +54,6 @@ get_header(); ?>
                   <li>
                     <i class="fa fa-user"></i>
                     <?php the_field('client'); ?>
-                  </li>
-                  <li>
-                    <i class="fa fa-globe"></i>
-                    <a href="<?php the_field('url'); ?>" target="_blank">Live URL</a>
                   </li>
                 </ul>
               </aside>

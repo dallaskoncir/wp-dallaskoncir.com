@@ -15,16 +15,6 @@
   <footer class="footer">
     <div class="wrapper">
       <div class="footer-top clear">
-        <div class="info addy">
-          <h4>Location</h4>
-          <p>
-            37 Bushell Court
-            <br />
-            Norwich, Ontario, Canada
-            <br />
-            N0J 1P0
-          </p>
-        </div>
         <div class="info social">
           <h4>Around the web</h4>
           <ul class="clear">

@@ -3,7 +3,7 @@
   position: fixed;
   z-index: 1000;
   padding: 8px 0;
-  background: rgba(0,0,0,0.9);
+  background: $color__header-bg;
   @media screen and (min-width: 700px) {
     background: transparent;
     transition: all 0.2s;
@@ -24,7 +24,6 @@
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  text-shadow: $shadow__big;
   &.rotate {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);

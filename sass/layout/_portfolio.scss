@@ -109,7 +109,7 @@
 .single-portfolio { 
   main {
     padding: 150px 0 110px;
-    background: $color__background-darkGrey;
+    background: $color__header-bg;
     color: $color__background-body;
   }
   .hentry {
@@ -137,6 +137,10 @@
     @media (min-width: 700px) {
       width: 70%;
     }
+  }
+  .btn {
+    margin: 32px 0;
+    text-align: center;
   }
   .portfolio-sidebar {
     padding-top: 16px;

@@ -490,6 +490,7 @@ a {
     text-decoration: none;
     font-size: 16px;
     font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     transition: all 0.2s; }
     .mainNav a:hover, .mainNav a.current {
       color: #f44336; }
@@ -856,7 +857,7 @@ http://flickity.metafizzy.co
       background: transparent;
       transition: all 0.2s; }
       .header.pinned {
-        background: #212121; } }
+        background: rgba(0, 0, 0, 0.9); } }
 
 .navbar-toggle {
   display: block;
@@ -866,8 +867,7 @@ http://flickity.metafizzy.co
   position: absolute;
   top: -2px;
   right: 12px;
-  transition: all 0.4s;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); }
+  transition: all 0.4s; }
   .navbar-toggle.rotate {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); }
@@ -884,8 +884,9 @@ http://flickity.metafizzy.co
 .intro {
   padding-top: 100px;
   height: 100%;
-  background: url(images/header.jpg) center fixed;
-  background-size: cover;
+  background-color: #212121;
+  background-image: url(http://www.transparenttextures.com/patterns/shley-tree-2.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   text-align: center;
   color: white;
   display: -webkit-flex;
@@ -927,10 +928,11 @@ http://flickity.metafizzy.co
 
 .bio, .work, .contact {
   text-align: center;
-  padding: 110px 0; }
+  padding: 110px 0;
+  font-size: 1.25rem; }
 
 .bio, .contact {
-  background-color: #4A423F;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff; }
 
 .bio img {
@@ -938,10 +940,6 @@ http://flickity.metafizzy.co
   width: 180px;
   border: 1px solid #fff;
   margin: 0 auto; }
-  @media (min-width: 700px) {
-    .bio img {
-      float: left;
-      margin-right: 20px; } }
 
 .bio p {
   text-align: left; }
@@ -969,9 +967,10 @@ http://flickity.metafizzy.co
   border-left: none;
   border-radius: 0;
   box-shadow: none;
-  background-color: #4A423F;
+  background-color: transparent;
   color: #fff; }
   .field input:focus, .field textarea:focus {
+    background-color: #4A423F;
     color: #fff; }
 
 .field textarea {
@@ -1009,9 +1008,6 @@ http://flickity.metafizzy.co
         width: 50%; } }
     .submit button:hover {
       opacity: 0.9; }
-  @media (min-width: 900px) {
-    .submit {
-      text-align: left; } }
 
 .success {
   display: none;
@@ -1138,7 +1134,7 @@ http://flickity.metafizzy.co
 
 .single-portfolio main {
   padding: 150px 0 110px;
-  background: #4A423F;
+  background: rgba(0, 0, 0, 0.9);
   color: #fff; }
 
 .single-portfolio .hentry {
@@ -1167,6 +1163,10 @@ http://flickity.metafizzy.co
     .single-portfolio .description {
       width: 70%; } }
 
+.single-portfolio .btn {
+  margin: 32px 0;
+  text-align: center; }
+
 .single-portfolio .portfolio-sidebar {
   padding-top: 16px;
   width: 100%;
@@ -1187,9 +1187,9 @@ http://flickity.metafizzy.co
 
 .footer {
   width: 100%;
-  background-color: #212121;
-  padding: 110px 0 0;
-  color: white;
+  background-color: #fff;
+  padding: 50px 0 0;
+  color: rgba(0, 0, 0, 0.9);
   text-align: center; }
 
 .footer-top .info {
@@ -1200,7 +1200,7 @@ http://flickity.metafizzy.co
   margin-right: 0; }
   @media (min-width: 900px) {
     .footer-top .info {
-      width: 33%; } }
+      width: 50%; } }
 
 .footer-top .social ul {
   padding: 0;
@@ -1218,24 +1218,23 @@ http://flickity.metafizzy.co
     display: block;
     width: 50px;
     height: 50px;
-    border: 1px solid white;
-    border-radius: 50%;
-    line-height: 1.9; }
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    line-height: 1.8; }
     .footer-top .social li .si:hover {
-      background: #fff; }
+      border-color: #f44336; }
 
 .footer-top .details a {
   text-decoration: underline; }
 
 .footer-top a {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.9);
   text-decoration: none; }
   .footer-top a:hover {
     color: #f44336; }
 
 .footer-bottom {
   padding: 16px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.3); }
+  border-top: 1px solid rgba(0, 0, 0, 0.9); }
 
 /*--------------------------------------------------------------
 # Universal Styles

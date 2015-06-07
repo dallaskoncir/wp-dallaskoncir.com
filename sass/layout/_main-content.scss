@@ -1,10 +1,11 @@
 .bio, .work, .contact {
   text-align: center;
   padding: 110px 0;
+  font-size: 1.25rem;
 }
 
 .bio, .contact {
-  background-color: $color__background-darkGrey;
+  background-color: $color__header-bg;
   color: $color__background-body;
 }
 
@@ -14,10 +15,6 @@
     width: 180px;
     border: 1px solid $color__background-body;
     margin: 0 auto;
-    @media (min-width: 700px) {
-      float: left;
-      margin-right: 20px;
-    }
   }
   p {
     text-align: left;
@@ -50,9 +47,10 @@
     border-left: none;
     border-radius: 0;
     box-shadow: none;
-    background-color: #4A423F;
+    background-color: transparent;
     color: $color__background-body;
     &:focus {
+      background-color: $color__background-darkGrey;
       color: $color__background-body;
     }
   }
@@ -93,9 +91,6 @@
     &:hover {
       opacity: 0.9;
     }
-  }
-  @media (min-width: 900px) {
-    text-align: left;
   }
 }
 
