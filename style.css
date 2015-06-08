@@ -490,7 +490,6 @@ a {
     text-decoration: none;
     font-size: 18px;
     font-size: 1.125rem;
-    text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     transition: all 0.2s; }
     .mainNav a:hover, .mainNav a.current {
@@ -1137,17 +1136,9 @@ http://flickity.metafizzy.co
 .single-portfolio .hentry {
   margin: 0; }
 
-.single-portfolio .flickity-prev-next-button.previous {
-  left: 20px; }
-  @media (min-width: 900px) {
-    .single-portfolio .flickity-prev-next-button.previous {
-      left: -20px; } }
-
-.single-portfolio .flickity-prev-next-button.next {
-  right: 20px; }
-  @media (min-width: 900px) {
-    .single-portfolio .flickity-prev-next-button.next {
-      right: -20px; } }
+.single-portfolio .gallery img {
+  display: block;
+  margin: 0 auto; }
 
 .single-portfolio .entry-header {
   text-align: center; }

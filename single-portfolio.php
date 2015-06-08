@@ -17,14 +17,12 @@ get_header(); ?>
               <h4><?php the_field('client'); ?></h4>
             </header><!-- .entry-header -->
 
-            <div class="gallery js-flickity" 
-              data-flickity-options='{
-                "imagesLoaded": true,
-                "contain": true
-              }'>
+            <div class="gallery">
               <?php while( has_sub_field('images') ):
                 $image = get_sub_field('image'); ?>
-                <img src="<?php echo $image['sizes']['large'] ?>">
+                <a href="<?php the_field('url'); ?>" target="_blank">
+                  <img src="<?php echo $image['sizes']['large'] ?>">
+                </a>
               <?php endwhile; ?>
             </div>
 
