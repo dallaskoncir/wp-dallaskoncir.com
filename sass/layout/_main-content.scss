@@ -4,9 +4,103 @@
   font-size: 1.25rem;
 }
 
-.bio, .contact {
+.site-main, .bio, .contact {
   background-color: $color__header-bg;
   color: $color__background-body;
+}
+
+.site-main {
+  padding: 150px 0 75px;
+}
+
+.blog-content {
+  float: left;
+  width: 100%;
+  @media (min-width: 700px) {
+    width: 70%;
+  }
+}
+
+.blog-sidebar {
+  float: right;
+  width: 100%;
+  margin-top: 30px;
+  @media (min-width: 700px) {
+    width: 25%;
+    margin-top: 0;
+  }
+  ul {
+    margin: 0;
+    padding-left: 10px;
+    list-style-position: inside;
+  }
+}
+
+.entry-title, .widget-title {
+  font-family: "museo-slab";
+}
+
+.entry-title {
+  margin-bottom: 16px;
+}
+
+.widget-title {
+  font-size: 1.5rem;
+}
+
+.entry-content {
+  margin: 0;
+}
+
+.post {
+  border-bottom: 2px solid white;
+}
+
+.entry-footer {
+  margin-bottom: 30px;
+  a {
+    display: inline-block;
+    padding-left: 10px;
+  }
+}
+
+.comments-title, .comment-reply-title {
+  font-size: 2rem;
+  &:after {
+    border: none;
+    margin: 0;
+  }
+}
+
+.comments-title {
+  margin-bottom: 30px;
+}
+
+.comment-list {
+  margin: 0 0 60px;
+  padding-left: 20px;
+}
+
+.comment-form {
+  .submit {
+    display: block;
+    background: rgba(244,67,54,1);
+    color: $color__link;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px;
+    transition: all 0.2s;
+    margin: 32px 0;
+    letter-spacing: 2px;
+    border: none;
+    &:hover {
+      background: rgba(244,67,54,0.9);
+      color: $color__link;
+    }
+    @media (min-width: 900px) {
+      width: 50%;
+    }
+  }
 }
 
 .bio {
