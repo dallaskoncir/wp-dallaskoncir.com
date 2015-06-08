@@ -1141,13 +1141,13 @@ http://flickity.metafizzy.co
   left: 20px; }
   @media (min-width: 900px) {
     .single-portfolio .flickity-prev-next-button.previous {
-      left: -40px; } }
+      left: -20px; } }
 
 .single-portfolio .flickity-prev-next-button.next {
   right: 20px; }
   @media (min-width: 900px) {
     .single-portfolio .flickity-prev-next-button.next {
-      right: -40px; } }
+      right: -20px; } }
 
 .single-portfolio .entry-header {
   text-align: center; }
@@ -1237,7 +1237,7 @@ http://flickity.metafizzy.co
 # Universal Styles
 --------------------------------------------------------------*/
 .wrapper {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 16px;
   position: relative; }

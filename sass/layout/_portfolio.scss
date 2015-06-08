@@ -118,13 +118,13 @@
   .flickity-prev-next-button.previous {
     left: 20px;
     @media (min-width: 900px) {
-      left: -40px;
+      left: -20px;
     }
   }
   .flickity-prev-next-button.next { 
     right: 20px; 
     @media (min-width: 900px) {
-      right: -40px;
+      right: -20px;
     }
   }
   .entry-header {
