@@ -32,7 +32,13 @@
         <i class="fa fa-bars"></i>
       </button>
       <nav class="mainNav">
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+      <?php
+        if ( is_page() ) {
+          wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
+        } else {
+          wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'blog-menu' ) );
+        }
+      ?>
       </nav>
     </div>
   </header>

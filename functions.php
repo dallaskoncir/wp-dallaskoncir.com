@@ -43,6 +43,7 @@ function dallaskoncir_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'dallaskoncir' ),
+		'blog' => esc_html__( 'Blog Menu', 'dallaskoncir' )
 	) );
 
 	/*
