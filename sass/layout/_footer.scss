@@ -19,8 +19,11 @@
   }
   .social ul {
     padding: 0;
-    width: 345px;
+    width: 250px;
     margin: 16px auto;
+    @media (min-width: 700px) {
+      width: 345px;
+    }
   }
   .social li {
     float: left;
@@ -30,14 +33,19 @@
       margin-left: 0;
     }
     .si {
-      font-size: 1.75rem;
+      font-size: 1.2rem;
       display: block;
-      width: 50px;
-      height: 50px;
+      width: 34px;
+      height: 34px;
       border: 1px solid $color__header-bg;
       line-height: 1.8;
       &:hover {
         border-color: $color__link-hover;
+      }
+      @media (min-width: 700px) {
+        font-size: 1.75rem;
+        width: 50px;
+        height: 50px;
       }
     }
   }

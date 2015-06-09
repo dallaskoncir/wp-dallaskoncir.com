@@ -1,9 +1,12 @@
 .mainNav {
-	width: auto;
+	width: 100%;
 	display: none;
 	margin-top: 8px;
 	padding: 16px 0;
-	@media (min-width: 700px) {
+	@media (min-width: 668px) {
+		margin-top: 48px;
+	}
+	@media (min-width: 737px) {
 		display: block;
 		float: right;
 		padding: 16px 0 0;
@@ -22,12 +25,12 @@
 		padding: 8px 0;
 		&:first-child {
 			border-top: 1px solid rgba(255,255,255,0.3);
-			@media (min-width: 700px) {
+			@media (min-width: 737px) {
 				margin-left: 0;
 				border: none;
 			}
 		}
-		@media (min-width: 700px) {
+		@media (min-width: 737px) {
 			float: left;
 			margin-left: 32px;
 			padding: 0;

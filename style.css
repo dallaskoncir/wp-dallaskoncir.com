@@ -248,19 +248,26 @@ h1.logo {
     color: white;
     text-decoration: none;
     font-family: "edo", sans-serif;
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 24px;
+    font-size: 1.5rem;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
     letter-spacing: 1.25px;
-    line-height: 1.5; }
+    line-height: 1.85;
+    display: block; }
     h1.logo a:hover, h1.logo a:focus, h1.logo a:visited:hover, h1.logo a:visited:focus {
       color: #f44336; }
     h1.logo a span, h1.logo a:visited span {
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+    @media (min-width: 321px) {
+      h1.logo a, h1.logo a:visited {
+        font-size: 28px;
+        font-size: 1.75rem;
+        line-height: 1.65; } }
     @media (min-width: 900px) {
       h1.logo a, h1.logo a:visited {
         font-size: 48px;
-        font-size: 3rem; } }
+        font-size: 3rem;
+        line-height: 1.5; } }
 
 h2, h3 {
   font-family: "museo-slab";
@@ -450,11 +457,14 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .mainNav {
-  width: auto;
+  width: 100%;
   display: none;
   margin-top: 8px;
   padding: 16px 0; }
-  @media (min-width: 700px) {
+  @media (min-width: 668px) {
+    .mainNav {
+      margin-top: 48px; } }
+  @media (min-width: 737px) {
     .mainNav {
       display: block;
       float: right;
@@ -472,11 +482,11 @@ a {
     padding: 8px 0; }
     .mainNav li:first-child {
       border-top: 1px solid rgba(255, 255, 255, 0.3); }
-      @media (min-width: 700px) {
+      @media (min-width: 737px) {
         .mainNav li:first-child {
           margin-left: 0;
           border: none; } }
-    @media (min-width: 700px) {
+    @media (min-width: 737px) {
       .mainNav li {
         float: left;
         margin-left: 32px;
@@ -773,10 +783,18 @@ http://flickity.metafizzy.co
   opacity: 0.6; }
 
 .flickity-prev-next-button.previous {
-  left: -40px; }
+  display: none; }
+  @media (min-width: 1025px) {
+    .flickity-prev-next-button.previous {
+      display: block;
+      left: -40px; } }
 
 .flickity-prev-next-button.next {
-  right: -40px; }
+  display: none; }
+  @media (min-width: 1025px) {
+    .flickity-prev-next-button.next {
+      display: block;
+      right: -40px; } }
 
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
@@ -848,7 +866,7 @@ http://flickity.metafizzy.co
   z-index: 1000;
   padding: 8px 0;
   background: rgba(0, 0, 0, 0.9); }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 737px) {
     .header {
       background: transparent;
       transition: all 0.2s; }
@@ -870,7 +888,7 @@ http://flickity.metafizzy.co
   .navbar-toggle i {
     font-size: 3rem;
     color: #ffffff; }
-  @media (min-width: 700px) {
+  @media (min-width: 737px) {
     .navbar-toggle {
       display: none; } }
   @media (min-width: 900px) {
@@ -1233,6 +1251,9 @@ http://flickity.metafizzy.co
         margin: auto; }
       .gallery .gallery-item .overlay h5, .gallery .gallery-item .overlay h6 {
         line-height: 1.25; }
+  .gallery .flickity-page-dots {
+    position: relative;
+    bottom: -10px; }
 
 .single-portfolio main {
   padding: 150px 0 110px;
@@ -1298,8 +1319,11 @@ http://flickity.metafizzy.co
 
 .footer-top .social ul {
   padding: 0;
-  width: 345px;
+  width: 250px;
   margin: 16px auto; }
+  @media (min-width: 700px) {
+    .footer-top .social ul {
+      width: 345px; } }
 
 .footer-top .social li {
   float: left;
@@ -1308,14 +1332,19 @@ http://flickity.metafizzy.co
   .footer-top .social li:first-child {
     margin-left: 0; }
   .footer-top .social li .si {
-    font-size: 1.75rem;
+    font-size: 1.2rem;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 34px;
+    height: 34px;
     border: 1px solid rgba(0, 0, 0, 0.9);
     line-height: 1.8; }
     .footer-top .social li .si:hover {
       border-color: #f44336; }
+    @media (min-width: 700px) {
+      .footer-top .social li .si {
+        font-size: 1.75rem;
+        width: 50px;
+        height: 50px; } }
 
 .footer-top .details a {
   text-decoration: underline; }

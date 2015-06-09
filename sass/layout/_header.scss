@@ -4,7 +4,7 @@
   z-index: 1000;
   padding: 8px 0;
   background: $color__header-bg;
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 737px) {
     background: transparent;
     transition: all 0.2s;
     &.pinned {
@@ -34,7 +34,7 @@
     font-size: 3rem;
     color: #ffffff;
   }
-  @media (min-width: 700px) {
+  @media (min-width: 737px) {
     display: none;
   }
   @media (min-width: 900px) {
