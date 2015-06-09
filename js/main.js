@@ -76,7 +76,7 @@ $(function() {
     var content = $('#message').val();
 
     // Send message to Mandrill.
-    $.post('wp-content/themes/dallaskoncir/email.php', {
+    $.post('/email.php', {
       data: {
         message: {
           subject: 'Someone wants you to build an Internet',
