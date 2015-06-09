@@ -965,9 +965,40 @@ http://flickity.metafizzy.co
 
 .entry-content {
   margin: 0; }
+  .entry-content h3 {
+    margin-top: 16px; }
+    .entry-content h3:after {
+      border: none;
+      margin: 0; }
+  .entry-content h4 {
+    margin-top: 16px; }
+  .entry-content figure {
+    margin: 1em 0; }
+    .entry-content figure .wp-caption-text {
+      text-align: left;
+      margin: 8px 0;
+      font-size: 0.9rem; }
 
 .post {
   border-bottom: 2px solid white; }
+
+.nav-links {
+  margin-bottom: 16px; }
+
+.nav-previous, .nav-next {
+  display: inline-block; }
+
+.nav-previous a:before {
+  content: '<';
+  display: inline-block;
+  padding-right: 10px; }
+
+.nav-next {
+  padding-left: 30px; }
+  .nav-next a:after {
+    content: '>';
+    display: inline-block;
+    padding-left: 10px; }
 
 .entry-footer {
   margin-bottom: 30px; }

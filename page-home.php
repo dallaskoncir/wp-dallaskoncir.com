@@ -100,7 +100,7 @@ get_header(); ?>
     <section id="contact" class="contact">
       <div class="wrapper">
         <h2>Get in Touch</h2>
-        <p>Fill out the form and I will get back to you ASAP.</p>
+        <p>Fill out the contact form below and I will get back to you ASAP.</p>
         <div class="form-container">
           <form id="contactForm" method="post" action="" data-parsley-validate>
               <div class="field">
